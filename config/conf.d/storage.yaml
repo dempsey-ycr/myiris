@@ -1,0 +1,24 @@
+# redis configuration
+redisUrl: "127.0.0.1:6379"
+redisPoolSize: 32
+redisDB: 10
+redisPassword: ""
+
+# mysql configuration
+mysqlHostProc: "root:password@tcp(localhost:3306)/wolo?charset=utf8"
+
+# mongo configuration
+mongoDB: "yolo"
+mongoHostProc: "mongodb://admin:password@localhost:27017,127.0.0.1:27017"
+#mongoHostProc: "mongodb://root:123456@192.168.1.253:27017,192.168.1.253:27017"
+
+# redis queue configuration
+queueName: "mq1V1Matched"
+queueType: "redis"
+queueNamePool: "mq1V1ForMatch"
+
+# logger
+logName: "myiris"
+logDir: "./logs/"
+logMod: "test"                # test 只打印不写文件，其他则写入日志文件
+logLevel: debug               # 0 Panic、1 fatal、2 error、3 warn 、4 info 、5 debug

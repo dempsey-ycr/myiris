@@ -1,0 +1,14 @@
+GOBUILD = GOARCH=$(GOARCH) GOOS=$(GOOS) go build
+
+OBJECT= main.go
+BINARY_OBJECT= main
+
+$(BINARY_OBJECT): $(OBJECT)
+	$(GOBUILD) -o $(BINARY_OBJECT) $(OBJECT)
+	./$(BINARY_OBJECT)
+	
+build:
+	$(GOBUILD) -o $(BINARY_OBJECT) $(OBJECT)
+	
+clean:
+	rm ./main
